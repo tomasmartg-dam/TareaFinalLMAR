@@ -1,0 +1,291 @@
+body {
+    background-color: #6CACE4;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Sempre Celta", "Inter", sans-serif;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.fondo-Raíces {
+    background-image: url(../img/breogan.jpg);
+}
+
+.fondo-Localización {
+    background-image: url(../img/vigo.jfif);
+}
+
+.fondo-Plantilla {
+    background-image: url(../img/equipo.jfif);
+}
+
+.fondo-Lendas {
+    background-image: url(../img/lendas.avif);
+}
+
+.header {
+    background-color: #3894e4c5;
+    padding: 15px 20px;
+    border-bottom: 3px solid #C09A4E;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-menu a {
+    color: #D50032;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #C09A4E;
+}
+
+.nav-menu a:hover {
+    background-color: #D50032;
+    color: #FFFFFF;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parent {
+    display: grid;
+    width: 100%;
+    gap: 30px;
+    padding-top: 20px;
+    grid-template-columns: 1fr 300px 1fr;
+    grid-template-areas:
+        "title title title"
+        "subtitle subtitle subtitle"
+        "content-text1 content-images content-text2";
+    align-items: start;
+}
+
+.div1 {
+    grid-area: title;
+    text-align: center;
+}
+
+.div2 {
+    grid-area: subtitle;
+    text-align: center;
+}
+
+
+.div3 {
+    grid-area: content-text1;
+}
+
+.div4 {
+    grid-area: content-text2;
+}
+
+.div5 img,
+.div6 img,
+.div6 video {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #00000076;
+}
+
+
+.image-stack {
+    grid-area: content-images;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.h1,
+.h2 {
+    text-align: center;
+    padding: 10px 0;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.h1 {
+    color: #C09A4E;
+    font-weight: 700;
+    font-size: 4.5em;
+}
+
+.h2 {
+    color: #D50032;
+    font-weight: 600;
+    font-size: 2.8em;
+}
+
+.text-block-1,
+.text-block-2,
+ul {
+    background-color: #FFFFFFc5;
+    padding: 20px;
+    border-radius: 10px;
+    color: #000000;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: justify;
+    display: block;
+    width: 100%;
+}
+ol{
+    list-style-type: none;
+}
+
+.footer {
+    margin-top: 50px;
+    padding: 15px 20px;
+    background-color: #000000c5;
+    color: #C09A4E;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 3px solid #D50032;
+}
+
+@media (max-width: 900px) {
+
+    .h1 {
+        font-size: 2.5em;
+    }
+
+    .h2 {
+        font-size: 1.5em;
+    }
+
+    .parent {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "subtitle"
+            "content-text1"
+            "content-images"
+            "content-text2";
+        gap: 20px;
+    }
+
+    .div5 img,
+    .div6 img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .text-block-1,
+    .text-block-2 {
+        text-align: left;
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+@font-face {
+    font-family: "Sempre Celta";
+    src: url(..//fonts/Sempre_Celta/SempreCelta-400-Regular.woff);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Sempre Celta";
+    src: url(../fonts/Sempre_Celta/SempreCelta-600-Semibold.woff);
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Sempre Celta";
+    src: url(../fonts/Sempre_Celta/SempreCelta-700-Bold.woff);
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter/Inter-Light.woff);
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter/Inter-Regular.woff);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter/Inter-Regular.woff2);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter/Inter-Bold.woff);
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter/Inter-Bold.woff2);
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter/Inter-ExtraBold.woff);
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter/Inter-ExtraBold.woff2);
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
